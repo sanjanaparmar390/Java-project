@@ -8,12 +8,13 @@ A curated collection of Java laboratory assignments, socket programming, enterpr
 
 ```
 java-lab/
-├── calculator/            # MVC-based GUI Calculator using Java Swing
-├── student-registration/  # Student Registration System with JDBC & MySQL
-├── serverclient/          # Client-Server Socket Communication (TCP Networking)
-├── rmi/                   # Distributed Computing with Remote Method Invocation (RMI)
-├── servlet/               # Jakarta / Java EE Servlet & JSP Web Application
-└── shopsphere/            # Full-Stack E-Commerce System (Swing, Web, RMI, Sockets)
+├── calculator(exp1)/        # MVC-based GUI Calculator using Java Swing
+├── student-registration(exp2)/  # Student Registration System with JDBC & MySQL
+├── serverclient(exp3)/      # Client-Server Socket Communication (TCP Networking)
+├── rmi(exp4)/               # Distributed Computing with Remote Method Invocation (RMI)
+├── servlet(exp5)/           # Jakarta / Java EE Servlet & JSP Web Application
+├── html to jsp(exp6)/       # HTML Form to JSP — Student Data Submission
+└── shopsphere/              # Full-Stack E-Commerce System (Swing, Web, RMI, Sockets)
 ```
 
 ---
@@ -91,19 +92,34 @@ java-lab/
 
 ---
 
-### 5. ⚡ Java Servlet Application (`servlet/`)
+### 5. ⚡ Java Servlet Application (`servlet(exp5)/`)
 - **Description:** Dynamic server-side web application leveraging Java Servlets, JSP, and Apache Maven for build lifecycle management.
 - **Technologies:** Java Servlets, Jakarta EE / Java EE, Maven, Apache Tomcat.
 - **How to Run:**
   ```bash
-  cd servlet
+  cd "servlet(exp5)"
   mvn clean package
   ```
   Deploy the generated `.war` file to your Apache Tomcat `webapps/` directory.
 
 ---
 
-### 6. 🛒 ShopSphere (`shopsphere/`)
+### 6. 🌐 HTML to JSP (`html to jsp(exp 6)/`)
+- **Description:** A Maven-based web application demonstrating how to submit an HTML/JSP form and process student data across two JSP pages using request forwarding.
+- **Technologies:** Java Server Pages (JSP), Apache Maven, Apache Tomcat.
+- **Key Components:**
+  - `student.jsp` — Input form collecting student details (name, roll no., branch, etc.).
+  - `result.jsp` — Result page that reads and displays submitted form parameters.
+- **How to Run:**
+  ```bash
+  cd "html to jsp(exp 6)"
+  mvn clean package
+  ```
+  Deploy the generated `.war` file to your Apache Tomcat `webapps/` directory and open `student.jsp` in a browser.
+
+---
+
+### 7. 🛒 ShopSphere (`shopsphere/`)
 - **Description:** A comprehensive enterprise-grade e-commerce application integrating multiple Java architectures:
   - **Swing Admin Panel:** Desktop backoffice for inventory and order management.
   - **Web Storefront:** Servlet/JSP web interface for customer browsing and checkout.
