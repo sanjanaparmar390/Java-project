@@ -1,6 +1,6 @@
 # ☕ Java Lab Repository (`java-lab`)
 
-A curated collection of Java laboratory assignments, socket programming, enterprise web applications, and database-driven software projects.
+A curated collection of Java laboratory assignments, socket programming, enterprise web applications, distributed computing (RMI), and database-driven software projects.
 
 ---
 
@@ -11,6 +11,7 @@ java-lab/
 ├── calculator/            # MVC-based GUI Calculator using Java Swing
 ├── student-registration/  # Student Registration System with JDBC & MySQL
 ├── serverclient/          # Client-Server Socket Communication (TCP Networking)
+├── rmi/                   # Distributed Computing with Remote Method Invocation (RMI)
 ├── servlet/               # Jakarta / Java EE Servlet & JSP Web Application
 └── shopsphere/            # Full-Stack E-Commerce System (Swing, Web, RMI, Sockets)
 ```
@@ -68,7 +69,29 @@ java-lab/
 
 ---
 
-### 4. ⚡ Java Servlet Application (`servlet/`)
+### 4. 📡 Remote Method Invocation (`rmi/`)
+- **Description:** A distributed computing application demonstrating Java RMI (Remote Method Invocation) to execute methods across different JVM instances via `LocateRegistry`.
+- **Key Components:**
+  - `MyInterface.java` — Remote interface extending `java.rmi.Remote` that defines the callable remote method (`add(int, int)`).
+  - `MyRemote.java` — Remote object implementation extending `UnicastRemoteObject` and implementing `MyInterface`.
+  - `Server.java` — RMI server creating an RMI registry on port `1099` and binding the remote instance as `rmi://localhost/Add`.
+  - `Client.java` — RMI client looking up the remote reference from the registry and invoking the remote addition method.
+- **How to Run:**
+  - *Terminal 1 (Start Server):*
+    ```bash
+    cd rmi
+    javac *.java
+    java Server
+    ```
+  - *Terminal 2 (Start Client):*
+    ```bash
+    cd rmi
+    java Client
+    ```
+
+---
+
+### 5. ⚡ Java Servlet Application (`servlet/`)
 - **Description:** Dynamic server-side web application leveraging Java Servlets, JSP, and Apache Maven for build lifecycle management.
 - **Technologies:** Java Servlets, Jakarta EE / Java EE, Maven, Apache Tomcat.
 - **How to Run:**
@@ -80,7 +103,7 @@ java-lab/
 
 ---
 
-### 5. 🛒 ShopSphere (`shopsphere/`)
+### 6. 🛒 ShopSphere (`shopsphere/`)
 - **Description:** A comprehensive enterprise-grade e-commerce application integrating multiple Java architectures:
   - **Swing Admin Panel:** Desktop backoffice for inventory and order management.
   - **Web Storefront:** Servlet/JSP web interface for customer browsing and checkout.
@@ -102,7 +125,25 @@ java-lab/
 
 ---
 
+## 📤 How to Add More Folders / Experiments
+
+To add and push new lab folders or experiments to this repository:
+
+1. **Create / Paste your folder** into the workspace root (e.g. `c:\Users\shubh\Desktop\java-lab1\new-experiment`).
+2. **Add code files** into that folder (Git does not track completely empty folders).
+3. **Stage, commit, and push** using PowerShell or Git Bash:
+   ```bash
+   git status
+   git add .
+   git commit -m "Add <folder-name> experiment"
+   git push origin main
+   ```
+4. **Update `README.md`** to keep the structure and run instructions in sync!
+
+---
+
 ## 👨‍💻 Author
 
 - **Name:** Shubham Nagpal
 - **Email:** shubham27806@gmail.com
+- **Repository:** [github.com/shubhamnagpal24354/java-lab](https://github.com/shubhamnagpal24354/java-lab)
